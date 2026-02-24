@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block title %} - Home{% endblock %} {% block
+content %}
+<section class="hero slide-up">
+  <div class="hero-content">
+    <h1 class="font-outfit text-gradient">Ship Code. Zero Downtime.</h1>
+    <p class="font-inter lead-text">
+      Experience next-generation AWS Blue/Green deployments. Designed for high
+      availability, zero friction, and absolute reliability.
+    </p>
+    <div class="cta-group">
+      <a href="/features" class="btn btn-primary glow-button">
+        Explore Features <span class="arrow">&rarr;</span>
+      </a>
+      <a
+        href="https://aws.amazon.com/devops/"
+        target="_blank"
+        class="btn btn-secondary glass"
+      >
+        View Documentation
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual fade-in">
+    <div class="hero-image-wrapper tilt-effect glass">
+      <img
+        src="{{ url_for('static', filename='hero_graphic.png') }}"
+        alt="CloudOps Dashboard Visualization"
+        class="responsive-hero-img"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="stats slide-up-delayed">
+  <div class="stat-card glass">
+    <h3 class="font-outfit text-gradient">99.99%</h3>
+    <p class="font-inter">Availability Guarantee</p>
+  </div>
+  <div class="stat-card glass">
+    <h3 class="font-outfit text-gradient">Zero</h3>
+    <p class="font-inter">Traffic Drops</p>
+  </div>
+  <div class="stat-card glass">
+    <h3 class="font-outfit text-gradient">200ms</h3>
+    <p class="font-inter">Rollback Time</p>
+  </div>
+</section>
+{% endblock %}

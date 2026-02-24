@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      NexusOps | Modern Deployment Platform {% block title %}{% endblock %}
+    </title>
+    <!-- Modern Typefaces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="dark-mode">
+    <!-- Background dynamic gradient -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <!-- Glassmorphic Navbar -->
+    <nav class="navbar glass">
+      <div class="nav-container">
+        <a href="/" class="brand">Nexus<span>Ops</span></a>
+        <ul class="nav-links">
+          <li>
+            <a href="/" class="{{ 'active' if request.path == '/' else '' }}"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/features"
+              class="{{ 'active' if request.path == '/features' else '' }}"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="{{ 'active' if request.path == '/about' else '' }}"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content Injection -->
+    <main class="content-wrapper">{% block content %}{% endblock %}</main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 NexusOps by Aniket. Cloud Native Deployments.</p>
+    </footer>
+
+    <!-- Custom Micro-animations JS -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
