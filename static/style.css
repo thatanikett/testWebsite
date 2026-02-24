@@ -118,19 +118,26 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #2d2d2d;
-  font-weight: 600;
+  color: #f5f1e8;
+  font-weight: 700;
   font-family: "IBM Plex Mono", monospace;
   transition: all 0.2s;
   position: relative;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2d2d2d;
+  border: 2px solid #d4572a;
+  box-shadow: 2px 2px 0px #d4572a;
+  letter-spacing: 0.05em;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #d4572a;
-  text-decoration: underline;
-  text-shadow: 1px 1px 0px #2d2d2d;
+  background-color: #d4572a;
+  color: #f5f1e8;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #2d2d2d;
+  text-shadow: none;
 }
 
 /* Layout */
